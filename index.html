@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasa NEO Fetcher</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      .writing {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="imageContainer"></div>
+    <div class="container mt-5">
+      <h2 class="mb-4 writing">NASA Near Earth Objects (NEO) Fetcher</h2>
+      <div class="row g-4 mb-4">
+        <div class="col-auto">
+          <label for="start-date" class="col-form-label writing"> Start Date </label>
+        </div>
+        <div class="col-auto">
+          <input type="date" id="start-date" class="form-control" />
+        </div>
+        <div class="col-auto">
+          <label for="end-date" class="col-form-label writing"> End Date </label>
+        </div>
+        <div class="col-auto">
+          <input type="date" id="end-date" class="form-control" />
+        </div>
+        <div class="col-auto">
+          <button onclick="fetchNEOData()" class="btn btn-primary mb-3">Fetch Neo Data</button>
+        </div>
+      </div>
+      <div id="elementCount" class="mb-4"></div>
+      <div id="neos" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
